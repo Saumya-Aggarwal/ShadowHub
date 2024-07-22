@@ -866,20 +866,41 @@ textarea {
   .explore-card {
     height: fit-content;
   }
-  .section-contact--homepage{
-
-    .contact-image{
+  .section-contact--homepage {
+    .contact-image {
       align-self: center;
       justify-self: center;
     }
-    img{
+    img {
       width: 35rem;
     }
   }
+}
+@media (width <= 625px) {
+
 }
 @media (width <= 500px) {
   html {
     font-size: 40%; /* with this line 1rem = 6px  */
   }
- 
+  .section-contact--homepage {
+    img {
+      width: 30rem;
+    }
+  }
+  .card-para {
+    width: 70%;
+  }
+  .section-why--choose {
+    .why-card {
+      align-items: center;
+      text-align: center;
+      padding-left: 0%;
+    }
+  }
+  .blog-card {
+    margin-inline: 4rem;
+  }
+}
+
 /***** End responsive Section *****/
