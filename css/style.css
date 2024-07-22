@@ -286,7 +286,7 @@ main {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 152px;
+  height: 15.2rem;
 }
 
 .custom-shape-divider-bottom-1716807341 .shape-fill {
@@ -358,10 +358,10 @@ main {
     padding-bottom: 0;
   }
 }
-#about-page{
+#about-page {
   background-color: var(--bg-color);
 }
-#section-contact--homepage{
+#section-contact--homepage {
   margin: 1rem auto -2rem auto;
 }
 /***** End About Section *****/
@@ -371,6 +371,7 @@ main {
 }
 .grid-four--cols {
   grid-template-columns: repeat(4, 1fr);
+
   gap: 3.2rem;
   margin-top: 9.6rem;
 }
@@ -415,7 +416,7 @@ main {
 }
 .explore-card {
   padding: 3.2em;
-  height: 289px;
+  height: 28.9rem;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
@@ -545,7 +546,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 90rem;
+  width: 60%;
   padding: 0 4rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 2rem;
@@ -658,64 +659,227 @@ footer {
   margin: 0 0 2.4rem 0;
 }
 /***** End Footer Section *****/
-/***** blog Section *****/ 
-.blog-image{
-  img{
+/***** blog Section *****/
+.blog-image {
+  img {
     height: 20rem;
     width: 100%;
     object-fit: cover;
   }
 }
-.blog-card{
-background-color: rgb(255, 255, 255);
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-&:hover{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.blog-card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 }
-}
-.blog-date{
+.blog-date {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
-  i{
+  i {
     margin-right: 0.5rem;
   }
 }
 /***** End blog Section *****/
-/***** contact page Section *****/ 
-.mb-3{
+/***** contact page Section *****/
+.mb-3 {
   margin-bottom: 3.2rem;
 }
-label{
+label {
   display: block;
   text-transform: capitalize;
 }
-input, textarea{
+input,
+textarea {
   width: 100%;
   padding: 1.2rem 2.4rem;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
-
 }
-::placeholder{
+::placeholder {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
-.btn-submit{
+.btn-submit {
   font-size: 1.8rem;
   text-transform: capitalize;
   color: white;
   border: none;
 }
-.contact{
+.contact {
   padding-bottom: 0%;
 }
-.section-contact{
+.section-contact {
   background-color: whitesmoke;
 }
-.contact-content--page{
-  border: rgb(220, 217, 217) 5px solid;
-  padding: 2.5rem;
-}
+
 /***** End contact page Section *****/
 
+/***** responsive Section *****/
+@media (width <= 1200px) {
+  html {
+    font-size: 56.25%; /* with this line 1rem = 9px  */
+  }
+}
+@media (width <= 1100px) {
+  html {
+    font-size: 50%; /* with this line 1rem = 8px  */
+  }
+  .section-explore {
+    .grid-four--cols {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  .section-why--choose {
+    .phone-img {
+      .animate::before,
+      .animate::after {
+        width: 0%;
+        height: 0%;
+        padding: 0%;
+        margin: 0%;
+      }
+      grid-column: 1/2;
+      grid-row: 1/-1;
+    }
+
+    .grid {
+      gap: 5rem;
+    }
+  }
+}
+
+@media (width <= 992px) {
+  html {
+    font-size: 50%; /* with this line 1rem = 8px  */
+  }
+  .section-hero {
+    margin: 2.2rem 3.4rem;
+    .hero-content {
+      margin-bottom: 0%;
+    }
+    .grid-two--cols {
+      grid-template-columns: 1fr;
+    }
+    .hero-image {
+      height: auto;
+      width: 60%;
+      margin-inline: auto;
+      margin-bottom: 10rem;
+    }
+    .btn {
+      margin-top: 2.4rem;
+    }
+  }
+  .section-contact {
+    .grid-two--cols {
+      grid-template-columns: 1fr;
+    }
+  }
+  .section-why--choose {
+    img {
+      width: 90%;
+      height: auto;
+    }
+  }
+  .grid {
+    gap: 3rem;
+  }
+}
+
+@media (width <= 768px) {
+  html {
+    font-size: 45%; /* with this line 1rem = 7px  */
+  }
+  .grid-two--cols,
+  .grid-three--cols {
+    grid-template-columns: 1fr;
+  }
+  .container.navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-container {
+    text-align: center;
+    width: 70%;
+  }
+  .section-hero {
+    padding-top: 50px;
+  }
+  .card-para {
+    width: 65%;
+  }
+  .about-card {
+    img {
+      width: 20rem;
+    }
+  }
+  .footer-section {
+    .grid-four--cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    * {
+      text-align: center;
+    }
+    .footer-2--div,
+    .footer-3--div,
+    .footer-4--div {
+      justify-self: center;
+    }
+    .footer-socials {
+      grid-row-start: 2;
+      grid-column: 1 /-1;
+      justify-self: center;
+    }
+  }
+  .section-why--choose {
+    figure {
+      height: 60rem;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+    img {
+      width: 75%;
+      height: auto;
+      left: 14%;
+    }
+    .why-card {
+      align-items: start;
+      text-align: left;
+      .card-para {
+        width: 90%;
+      }
+      .flex {
+        gap: 0%;
+      }
+      padding-left: 10rem;
+    }
+  }
+  .explore-card {
+    height: fit-content;
+  }
+  .section-contact--homepage{
+
+    .contact-image{
+      align-self: center;
+      justify-self: center;
+    }
+    img{
+      width: 35rem;
+    }
+  }
+}
+@media (width <= 500px) {
+  html {
+    font-size: 40%; /* with this line 1rem = 6px  */
+  }
+ 
+/***** End responsive Section *****/
